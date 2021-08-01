@@ -1,0 +1,69 @@
+*{box-sizing:border-box}
+body{
+    background-color: hsl(257, 40%, 49%);
+    color:white;
+}
+img[alt="logo"]{
+    margin: 1.5% 0 0 2%;
+}
+section{
+    display: flex;
+    margin:3% 3% 1%;
+}
+section >div{
+    display:flex;
+    flex-direction: column;
+    margin: 20px;
+}
+h1{font-size: 40px;font-family: Poppins;}
+p{font-size: 18px;font-family: "Open Sans";}
+button{
+    width:max-content;
+    padding:3% 8%;
+    font-size: 18px;
+    background:white;
+    color:hsl(257, 40%, 49%);
+    border:hsl(257, 40%, 49%);
+    cursor: pointer;
+    border-radius: 25px;
+}
+button:hover{
+    background-color:hsl(300, 69%, 71%) ;
+    color:white;
+}
+a{color:white}
+i:hover,a:hover{
+    color:hsl(300, 69%, 71%) ;
+    cursor: pointer;
+}
+i:not(:last-of-type){margin-right:3px}
+/*Mobile*/
+@media (max-width:769px){
+    body{background-image: url(images/bg-mobile.svg);}
+    section{flex-direction: column;}
+    section >div{text-align: center;}
+    button{margin-left:33%}
+    #social-media{
+        font-size: 30px;
+        margin: 20px 0 50px 40%;;
+    }
+}
+
+/*Desktop*/
+@media(min-width:1200px){
+    body{background-image: url(images/bg-desktop.svg);}
+    section img{margin-right:1%;}
+    #social-media{margin-left:85%;font-size: 35px}
+}
+
+.attribution { font-size: 18px; text-align: center; }
+.attribution a { color: hsl(300, 69%, 71%); }
+
+@font-face {
+    font-family:Poppins ;
+    src: url(font/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url(font/OpenSans-Regular.ttf);
+}
